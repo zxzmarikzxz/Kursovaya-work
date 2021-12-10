@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Kursovaya_work
 {
-    public partial class Menu : Form
+    public partial class menu_employee : Form
     {
-        public Menu()
+        public menu_employee()
         {
             InitializeComponent();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void menu_employee_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
