@@ -9,7 +9,7 @@ namespace Library2
 {
     public class ConnBaza
     {
-        public MySqlConnection ConnBaz()
+        public static MySqlConnection ConnBaz()
         {
             //Создание строки подключения
             string port = "33333";
@@ -18,8 +18,8 @@ namespace Library2
             string password = "18734518";
             string db = "st_3_6_19";
             string connStr = $"server={host};port={port};user={user};database={db};password={password};";
-            MySqlConnection conn = new MySqlConnection(connStr);
-            return conn; //Возврат строки подключения
+            MySqlConnection conbaza = new MySqlConnection(connStr);
+            return conbaza; //Возврат строки подключения
         }
     }
 }
