@@ -61,7 +61,9 @@ namespace Kursovaya_work
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "menu_employee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menu_employee";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.menu_employee_FormClosing);
             this.Load += new System.EventHandler(this.menu_employee_Load);
             this.ResumeLayout(false);
 

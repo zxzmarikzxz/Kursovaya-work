@@ -30,10 +30,10 @@ namespace Kursovaya_work
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.ID_service = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.service2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cost_service = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,16 +49,6 @@ namespace Kursovaya_work
             this.dataGridView1.Size = new System.Drawing.Size(537, 397);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(594, 183);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 77);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Вывод списка доступных услуг";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ID_service
             // 
@@ -76,6 +66,16 @@ namespace Kursovaya_work
             this.cost_service.HeaderText = "cost_service";
             this.cost_service.Name = "cost_service";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(594, 183);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 77);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Вывод списка доступных услуг";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -85,6 +85,7 @@ namespace Kursovaya_work
             this.Controls.Add(this.dataGridView1);
             this.Name = "service";
             this.Text = "service";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.service_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

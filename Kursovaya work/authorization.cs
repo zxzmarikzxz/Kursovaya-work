@@ -61,11 +61,13 @@ namespace Kursovaya_work
             if (Podkluchenie(textBox1.Text,textBox2.Text) == 1)
             {
                 menu_employee me = new menu_employee();
+                this.Hide();
                 me.ShowDialog();
             }
             else if(Podkluchenie(textBox1.Text,textBox2.Text) == 2)
             {
                 menu_director me2 = new menu_director();
+                this.Hide();
                 me2.ShowDialog();
 
                 

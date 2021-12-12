@@ -29,13 +29,21 @@ namespace Kursovaya_work
         private void button1_Click(object sender, EventArgs e)
         {
             prosmotr_uslug pr = new prosmotr_uslug();
+            this.Hide();
             pr.ShowDialog();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             service pr2 = new service();
+            this.Hide();
             pr2.ShowDialog();
+        }
+
+        private void menu_employee_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

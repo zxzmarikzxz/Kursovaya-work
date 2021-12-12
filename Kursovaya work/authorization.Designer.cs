@@ -101,6 +101,7 @@ namespace Kursovaya_work
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "authorization";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.authorization_FormClosed);
             this.Load += new System.EventHandler(this.Menu_Load);

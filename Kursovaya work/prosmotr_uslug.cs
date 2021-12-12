@@ -45,5 +45,11 @@ namespace Kursovaya_work
             }
             conbaza.Close();
         }
+
+        private void prosmotr_uslug_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            menu_employee me = new menu_employee();
+            me.Show();
+        }
     }
 }
