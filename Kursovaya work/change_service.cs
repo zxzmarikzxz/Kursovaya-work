@@ -12,23 +12,45 @@ using Library2;
 
 namespace Kursovaya_work
 {
-    public partial class service : Form
+
+    public partial class change_service : Form
     {
         MySqlConnection conbaza = ConnBaza.ConnBaz();
         private BindingSource bSource = new BindingSource(); //Унифицированный доступ к источнику данных          
         private DataTable table = new DataTable();
         private MySqlDataAdapter adapter = new MySqlDataAdapter(); //Получение данных из источника
-        public service()
+        public change_service()
         {
             InitializeComponent();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
+        {
+            conbaza.Open();
+            {
+                string commandStr = $"INSERT INTO Service (ID_service,service, cost_service) VALUES (@id,@servic,@cost)";
+                MySqlCommand command = new MySqlCommand(commandStr, conbaza);
+                try
+                {
+                    //берём значение из текстбокса и кидаем в базу данных
+                    command.Parameters.Add("@id", MySqlDbType.VarChar).Value = textBox3.Text;
+                    command.Parameters.Add("@servic", MySqlDbType.VarChar).Value = textBox1.Text;
+                    command.Parameters.Add("@cost", MySqlDbType.VarChar).Value = textBox2.Text;                  
+                    //Изменения данных в базе данных
+                    command.ExecuteNonQuery();
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"{ex}");
+                }
+                finally
+                {
+                    conbaza.Close();
+                }
+            }
+        }
+        
+        private void button5_Click(object sender, EventArgs e)
         {
             try
             {
@@ -51,15 +73,16 @@ namespace Kursovaya_work
             }
             conbaza.Close();
         }
-        private void service_Load(object sender, EventArgs e)
+
+        private void change_service_Load(object sender, EventArgs e)
         {
 
         }
-        private void service_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void change_service_FormClosed(object sender, FormClosedEventArgs e)
         {
-            menu_employee me = new menu_employee();
-            this.Hide();
-            me.ShowDialog();
+            menu_director md = new menu_director();
+            md.Show();
         }
      
     }

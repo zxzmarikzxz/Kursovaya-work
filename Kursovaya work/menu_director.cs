@@ -16,5 +16,22 @@ namespace Kursovaya_work
         {
             InitializeComponent();
         }
+
+        private void menu_director_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            change_service cs = new change_service();
+            this.Hide();
+            cs.ShowDialog();
+        }
+
+        private void menu_director_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

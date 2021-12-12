@@ -56,6 +56,12 @@
     <Compile Include="authorization.Designer.cs">
       <DependentUpon>authorization.cs</DependentUpon>
     </Compile>
+    <Compile Include="change_service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="change_service.Designer.cs">
+      <DependentUpon>change_service.cs</DependentUpon>
+    </Compile>
     <Compile Include="menu_director.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <EmbeddedResource Include="authorization.resx">
       <DependentUpon>authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="change_service.resx">
+      <DependentUpon>change_service.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu_director.resx">
       <DependentUpon>menu_director.cs</DependentUpon>

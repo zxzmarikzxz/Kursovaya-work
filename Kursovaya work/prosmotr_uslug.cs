@@ -49,7 +49,13 @@ namespace Kursovaya_work
         private void prosmotr_uslug_FormClosed(object sender, FormClosedEventArgs e)
         {
             menu_employee me = new menu_employee();
-            me.Show();
+            this.Hide();
+            me.ShowDialog();
+        }
+
+        private void prosmotr_uslug_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

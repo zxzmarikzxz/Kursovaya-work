@@ -98,6 +98,7 @@ namespace Kursovaya_work
             this.Name = "prosmotr_uslug";
             this.Text = "prosmotr_uslug";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.prosmotr_uslug_FormClosed);
+            this.Load += new System.EventHandler(this.prosmotr_uslug_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

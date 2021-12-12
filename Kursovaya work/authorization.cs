@@ -80,7 +80,7 @@ namespace Kursovaya_work
 
         private void authorization_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Application.Exit();
         }
   
     }
